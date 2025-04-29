@@ -1,0 +1,191 @@
+\documentclass[aps,prd,twocolumn,notitlepage,nofootinbib,,nobibnotes,superscriptaddress,amsmath,amssymb,preprintnumbers]{revtex4-1}
+
+\usepackage{graphicx} 
+\usepackage{dcolumn}
+\usepackage{bm}        % for math
+\usepackage{amssymb}   % for math
+\usepackage{adjustbox}  
+\usepackage{amsmath,array}
+\usepackage{comment}
+\usepackage{natbib}
+\usepackage{MnSymbol}
+\usepackage[hidelinks]{hyperref}
+\usepackage{graphicx}
+\usepackage{subfig}
+\usepackage{color}
+\usepackage{braket}
+\usepackage     [utf8]                  {inputenc}
+\usepackage     [T1]                    {fontenc}
+\usepackage     [english]               {babel}
+%   \addto{\captionsenglish}{\renewcommand{\bibname}{References}}
+%\usepackage{dutchcal}
+\usepackage{epigraph}
+\setlength\epigraphwidth{8cm}
+\setlength\epigraphrule{0pt}
+\usepackage{etoolbox}
+\usepackage{ dsfont }
+\usepackage{physics}
+\usepackage{xcolor}
+\usepackage{siunitx}
+\makeatletter
+\patchcmd{\epigraph}{\@epitext{#1}}{\itshape\@epitext{#1}}{}{}  
+\newcommand*\eqsize{%
+\@setfontsize\mysize{9.0}{9.0}%
+    }
+    \usepackage{multirow}
+\makeatother
+\usepackage{cleveref}
+\usepackage{xfrac}
+\usepackage{amsmath,amssymb}
+\usepackage{esdiff} % derivatives
+\usepackage{commath} % math macros
+\usepackage{bbm} % blackboard style symbols
+\usepackage{braket}
+\usepackage{slashed}
+% Symbols
+
+\newcommand{\rmd}{\mathrm{d}}
+\newcommand{\rme}{\mathrm{e}}
+\newcommand{\rmi}{\mathrm{i}}
+\newcommand{\rmq}{\mathrm{q}}
+\newcommand{\rmN}{\mathrm{N}}
+\newcommand{\rmP}{\mathrm{p}}
+\newcommand{\rmh}{\mathrm{h}}
+
+\newcommand{\fm}{\mathrm{fm}}
+
+\newcommand{\pbar}{\bar{\rmP}}
+\newcommand{\Nbar}{\bar{\rmN}}
+\newcommand{\ppbar}{\rmP\pbar}
+\newcommand{\qqbar}{\rmq\bar{\rmq}}
+\newcommand{\NNbar}{\rmN\bar{\rmN}}
+
+\newcommand{\aem}{\alpha}
+\newcommand{\as}{\alpha_{S}}
+
+
+\newcommand{\xp}{\boldsymbol{x}_\perp} 			% transverse x
+\newcommand{\pp}{\boldsymbol{p}}
+\newcommand{\kp}{\boldsymbol{k}}
+\newcommand{\qp}{\boldsymbol{q}}
+\newcommand{\pD}{\boldsymbol{P}_d}
+\newcommand{\qD}{\boldsymbol{Q}_d}
+\newcommand{\Xv}{\boldsymbol{X}}
+\newcommand{\Yv}{\boldsymbol{Y}}
+\newcommand{\Rv}{\boldsymbol{R}}
+\newcommand{\Sv}{\boldsymbol{S}}
+\newcommand{\sv}{\boldsymbol{s}}
+\newcommand{\xv}{\boldsymbol{x}}
+\newcommand{\yv}{\boldsymbol{y}}
+\newcommand{\rv}{\boldsymbol{r}}
+\newcommand{\Lp}{\boldsymbol{L}}
+\newcommand{\Pp}{\boldsymbol{P}}
+\newcommand{\Qp}{\boldsymbol{Q}}
+\newcommand{\zv}{\boldsymbol{z}}
+\newcommand{\Zv}{\boldsymbol{Z}}
+
+
+% Functions 
+\newcommand{\cn}{\rm{cn}}
+\newcommand{\sn}{\rm{sn}}
+
+ 
+\newcommand{\xt}{x_\perp}			% transverse x, scalar
+\newcommand*\PT[1]{{\boldsymbol{p}_{#1}}_\perp} % transverse p-vector
+\newcommand*\PTS[1]{{p_{#1}}_\perp}				% transverse p (norm)
+\newcommand*\PS[1]{\boldsymbol{p}_{#1}}			% p (3-vec)
+
+\newcommand{\GeV}{\;\text{GeV}}
+\newcommand{\MeV}{\;\text{MeV}}
+\newcommand{\TeV}{\;\text{TeV}}
+\newcommand{\trD}{\tilde{\mathrm{tr}}_{\mathrm{D}}}
+\newcommand{\NC}{N_{\mathrm{c}}}
+\newcommand{\gmu}{\gamma^\mu}
+\newcommand{\gnu}{\gamma^\nu}
+\newcommand{\LQCD}{\Lambda_{\rm QCD}}
+\newcommand{\LIR}{\Lambda_{\rm IR}}
+
+\newcommand{\calD}{\mathcal{D}}
+\newcommand{\calL}{\mathcal{L}}
+\newcommand{\calM}{\mathcal{M}}
+\newcommand{\calO}{\mathcal{O}}
+\newcommand{\calP}{\mathcal{P}}
+\newcommand{\calT}{\mathcal{T}}
+\newcommand{\calN}{\mathcal{N}}
+\newcommand{\calV}{\mathcal{V}}
+\newcommand{\calU}{\mathcal{U}}
+
+\newcommand{\dt}{\partial_t}
+\newcommand{\dphi}{\partial_\varphi}
+\newcommand{\dr}{\partial_r}
+\newcommand{\dz}{\partial_z}
+
+\newcommand{\Htot}{\hat{H}_{\rm tot}}
+\newcommand{\Pd}{\hat{P}_{\rm d}}
+
+\newcommand{\rhohat}{\hat{\rho}_0}
+\newcommand{\That}{\hat{T}}
+\newcommand{\Vpn}{\hat{V}_{\rm pn}}
+\newcommand{\Vpipn}{\hat{V}_{ \pi \rm p n}}
+\newcommand{\LSigM}{L$\sigma$M~}
+
+\definecolor{oscarC}{RGB}{22, 156, 172}
+\newcommand{\oscar}[1]{{\color{oscarC} {{\textbf{Oscar:} #1}}}}
+\newcommand{\javi}[1]{\textcolor{violet}{[\small\textbf{Javi}: #1]}}
+
+\newcommand{\tocite}[1]{\textcolor{purple}{[#1]}}
+
+\begin{document}
+
+
+
+\date{\today}
+
+\title{Stuff we can do?}
+
+\author{Oscar Garcia-Montero}
+\affiliation{Fakult\"at f\"ur Physik, Universit\"at Bielefeld, D-33615 Bielefeld, Germany}
+
+\author{Felipe Montealegre}
+\affiliation{Selah Café}
+
+         
+\begin{abstract} 
+Fun stuff.
+\end{abstract}
+
+\maketitle
+\section{Ideas}
+\label{sec:ideas}
+
+\begin{itemize}
+\item Crab idea 
+\begin{itemize}
+\item Spatial Kernels, analogy to the QCD low-x (high energy) limit?\cite{Mantysaari2013}
+\item spatial Lotka-Volterra?
+\cite{WU20194890} 
+\item spatial control \cite{BONNEAU201615}
+\item control theory, reinforcement learning \cite{lapeyrolerie2022deep,shastri2008optimal,bonneau2017optimal,bonneau2016spatially,montealegre2023pretty}
+\item a classic of control theory in ecology by my mathy-fisheries collaborator (old paper by now, but still a foundation) \cite{walters1978ecological}
+\end{itemize}
+
+\item Path Integral Idea 
+\begin{itemize}
+\item initial paper \cite{Kappen_2005}
+\item RL path integral \cite{theodorou2010generalized}
+\end{itemize}
+
+\end{itemize}
+\section{Reading and to-do}
+\label{sec:todo}
+
+\begin{itemize}
+\item 
+\end{itemize}
+
+
+\appendix 
+
+\bibliography{References}
+
+\end{document}
